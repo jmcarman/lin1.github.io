@@ -1,0 +1,11 @@
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+url: "https://jmcarman.github.io/"
+baseurl: "/template.github.io/"
+author: "Your Name"
+description: "Course website"
+keywords: "course template, website, jekyll"
+license: "CC BY-SA"
