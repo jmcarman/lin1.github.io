@@ -4,8 +4,8 @@ defaults:
     values:
       layout: default
 url: "https://jmcarman.github.io/"
-baseurl: "/template.github.io/"
-author: "Your Name"
+baseurl: "/lin1.github.io/"
+author: "Jason Carman & Murray Saul"
 description: "Course website"
-keywords: "course template, website, jekyll"
+keywords: "introduction to linux, linux, github, open source, cnet206"
 license: "CC BY-SA"

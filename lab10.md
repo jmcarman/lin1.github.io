@@ -1,0 +1,875 @@
+---
+title: Lab 10 - Advanced Shell Scripting
+description: Lab 10 for Students to Learn Shell Scripting
+---
+
+# Lab 10: Advanced Shell Scripting
+
+## Main Objectives
+
+- Explain how to configure and use Linux start-up files.
+- Use **arrays** and **associative arrays** in a shell script.
+- Use a **for** loop control using a list with **command substitution** and **arrays**.
+- Use a **while** loop in a shell script.
+- Use **getopts** to parse command line options.
+- Use **if statements** for error checking in a shell script.
+- Use the **exit** statement in a shell script.
+- Create a bash shell script to **generate multiple user accounts** from a comma separated value (.csv) file.
+- Add users to the system using a bash shell script.
+
+## Lab Reference Material
+
+**Course Slides:**
+
+- Week 12 Lecture 1 Notes: [Web](https://docs.google.com/presentation/d/e/2PACX-1vTjE7tWGNBgcZi9QTOFYLPPnMp0kbyHYP7255OuZluTK-Bsz7yAtiBX8a9nA1Kr_DJ9m26OZ2gmeOjA/pub?start=false&loop=false&delayms=3000)
+
+**Startup Files:**
+
+- [Purpose](https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html)
+- [Examples](http://www.linuxfromscratch.org/blfs/view/svn/postlfs/profile.html)
+
+**Control Flow Statements:**
+
+- [for Loop](https://www.cyberciti.biz/faq/bash-for-loop/#:~:text=A%20'for%20loop'%20is%20a,files%20using%20a%20for%20loop.)
+- [while Loop](https://bash.cyberciti.biz/guide/While_loop)
+- [Arrays](https://www.tutorialspoint.com/unix/unix-using-arrays.htm)
+- [Associative Arrays](https://phoenixnap.com/kb/bash-associative-array#ftoc-heading-3)
+
+**Additional Statements:**
+
+- [exit](https://www.geeksforgeeks.org/exit-command-in-linux-with-examples/#:~:text=exit%20command%20in%20linux%20is,last%20command%20that%20is%20executed.&text=After%20pressing%20enter%2C%20the%20terminal%20will%20simply%20close.)
+
+## Key Concepts
+
+### Start-Up Files
+
+**Shell configuration (start-up) files** are **scripts** that are run when you log in, log out, or start a new shell. The start-up files can be used, for example, to **set the prompt and screen display**, **create local variables**, or create temporary Linux commands (**aliases**)
+
+The **/etc/profile** file belongs to the root user and is the first start-up file that executes when you log in, regardless of shell.
+
+User-specific config start-up files are in the user's home directory:
+
+- **~/.profile** runs when you log in, regardless of your default shell (ie not Bash).
+- **~/.bash_profile** runs when you log in using a Bash shell.
+- The **~/.bashrc** runs when you start an interactive Bash shell.
+
+**Logout Files**
+
+There is a file that **resets or restores the shell environment** (including shut-down of programs running in the shell) when the user logs out of their shell. User-specific logout start-up files are in the user's home directory: **~/.bash_logout**
+
+### if-elif-else Statement
+
+The **elif** statement can be used to perform additional conditional tests of the previous test condition tests **FALSE**. This statement is used to make your logic control-flow statement to be more adaptable.
+
+_How it Works:_
+
+If the test condition returns a **TRUE** value, then the Linux Commands between **then** and **else** statements are executed.
+
+If the test returns a **FALSE** value, then **a new condition is tested again**, and action is taken if the result is **TRUE**, then the Linux Commands between **then** and **else** statements are executed. **Additional elif statements** can be used if additional conditional testing is required . Eventually, an action will be taken when the final test condition is **FALSE**.
+
+![If elif else](/img/If-elif-else.png)
+
+Example of how an **if-elif-else** statement works. (Image licensed under [cc](https://creativecommons.org/licenses/by-sa/3.0/))
+
+_Example:_
+
+```bash
+#!/bin/bash
+num1=5
+num2=10
+if [[ $num1 –lt $num2 ]]; then
+  echo “Less Than”
+elif [[ $num1 –gt $num2 ]]; then
+  echo “Greater Than”
+else
+  echo “Equal to”
+fi
+```
+
+### For Loop Using Command Substitution
+
+Let’s issue the **for** loop with a **list** using **command substitution**. In the example below, we will use command substitution to issue the ls command and have that output (filenames) become arguments for the for loop.
+
+_Example:_
+
+```bash
+for x in $(ls); do
+   echo “The item is: $x”
+done
+```
+
+### While Loop
+
+The **while** loop is useful to loop based on the result from a test condition or command result. This type of loop is very useful for **error-checking**.
+
+_How it Works:_
+
+_The condition/expression is evaluated, and if the condition/expression is **TRUE**, the code within … the block is executed. This repeats until the condition/expression becomes **FALSE**._ Reference: https://en.wikipedia.org/wiki/While_loop
+
+![While loop](/img/While-loop.png)
+
+Example of how a while loop works. (Image licensed under [cc](https://creativecommons.org/licenses/by-sa/3.0/))
+
+_Example 1:_
+
+```bash
+#!/bin/bash
+answer=10
+read -p "pick a number between 1 and 10: " guess
+while [[ $guess != $answer ]]; do
+    read -p "Try again: " guess
+done
+echo "You are correct"
+```
+
+_Example 2:_
+
+```bash
+#!/bin/bash
+value=1
+while [[ $value -le 5 ]]; do
+  echo "$value"
+  ((value=value+1)) # could also use ((value++))
+done
+```
+
+_Output:_
+
+```bash
+$ ./while2.bash
+1
+2
+3
+4
+5
+```
+
+### Arrays
+
+In Lab 6 you learned about **User-created** variables. Variables are used to store single values. **Arrays** store multiple values into a single variable. Arrays in Bash are 0 indexed, which means the first element of the array is 0. The following will populate the array users with usernames:
+
+```bash
+# Populate the array users with usernames
+users=("tstark" "bbanner" "thor" "srogers" "nromanoff")
+```
+
+To print out the elements of the array individually you can use the array name and index number:
+
+```bash
+# Access the elements
+echo "${users[0]}" # Will print tstark
+echo "${users[1]}" # Will print bbanner
+echo "${users[2]}" # Will print thor
+echo "${users[3]}" # Will print srogers
+echo "${users[4]}" # Will print nromanoff
+```
+
+While you can print out individual elements of an array (as demonstrated above), more commonly you use a **for loop** to loop through an array. The following code will print each of the users on a new line using a for loop.
+
+```bash
+# Print out each element of the array using a for loop
+for user in "${users[@]}"; do
+  echo $user
+done
+```
+
+### Associative arrays
+
+Associative arrays are a type of array that allows you to use arbitrary strings as keys instead of just indexed numbers. This feature is available in Bash version 4.0 and later. Associative arrays are declared using the `declare -A` syntax. You can add, retrieve, and delete elements using the keys. They are particularly useful for creating mappings or dictionaries where you need to associate specific keys with corresponding values, like a list of users and their information. To use an associative array you must first declare it.
+
+```bash
+# Declare the associative array userInfo
+declare -A userInfo
+```
+
+Next you can populate the associative array with keys and values. You can do this manually, as demonstrated below. Alternatively you can read the information in from a file. This is what you will do later in the lab.
+
+```bash
+# Populate the associative array usersInfo using the username as the key, user's full name and email address as the values
+declare -A usersInfo
+usersInfo["tstark"]="Tony Stark,ironman@avengers.org"
+usersInfo["bbanner"]="Bruce Banner,hulk@avengers.org"
+usersInfo["thor"]="Thor Odinson,thor@avengers.org"
+usersInfo["srogers"]="Steve Rogers,captainamerica@avengers.org"
+usersInfo["nromanoff"]="Natasha Romanoff,blackwidow@avengers.org"
+```
+
+### Exit Statements
+
+**exit Statement**
+
+The **exit** statement is used to **terminate** a shell script. This statement is very useful when combined with logic in a shell script. The exit command can contain an argument to provide the exit status of your shell script.
+
+_Example:_
+
+```bash
+if [[ $# -ne 1 ]]; then
+  echo "USAGE: $0 [arg]"
+  exit 1
+fi
+```
+
+## Investigation 1: Using Start-Up Files
+
+**ATTENTION: This lab must be graded by the end of your classes in Week 13 to obtain a grade of 2% towards this course.**
+
+In this investigation, you will learn how to **customize** your **Bash Linux shell environment** by creating and testing a **start-up** file.
+
+**Perform the Following Steps:**
+
+1. Launch your Ubuntu **VM**.
+2. Open the terminal application.
+3. Issue a Linux command to change to your **home** directory.
+4. Issue a Linux command to confirm you are located in the **home** directory.
+5. Install the curl utility:
+
+```bash
+sudo apt -y install curl
+```
+
+5. Use the **more** command to view the contents of the **default start-up** file called **/etc/profile**
+
+   - This file contains the **default settings** when you open your Bourne shell (eg. if issuing the command **sh**).
+
+6. Use the **more** command to view the contents of the start-up file called **/etc/bash.bashrc**
+
+   - This file contains the **default settings** when you **open your Bash shell** (eg. if issuing the command **bash**).
+   - Since we are using the **Bash shell** by default, let's create a **customized Bash start-up file**.
+   - This startup file is located in your **home** directory using the name "**.bashrc**"
+   - Let's copy your **.bashrc** file to prevent **accidental overwrite**.
+
+7. Issue the following linux command:
+
+```bash
+cp ~/.bashrc ~/.bashrc.bk
+```
+
+8. Use a text editor like vi or nano to create the text file called **~/.bashrc** (eg. `nano ~/.bashrc`)
+
+   - If you are using the vi text editor, refer to notes on text editing in a previous week in the course schedule.
+
+9. Add the following lines to the bottom of **~/.bashrc** (the symbol "\[" is the open square bracket symbol):
+
+```bash
+echo -e -n "\e[0;34m"
+echo "Login information:"
+echo
+echo "ip: $(curl -s https://ipinfo.io/ip)"
+curl -s https://ipinfo.io | egrep -e "city" -e "region" -e "country" -e "timezone" | sed -e 's/"//g' -e 's/,$//g'
+echo
+echo -e -n "\e[m"
+
+echo "The following packages can be upgraded:"
+apt list --upgradable
+alias clearfile="cat /dev/null >"
+```
+
+- **NOTE:** You will notice there is **NO she-bang line** since this is a **start-up** file.
+
+10. Save your editing session and exit the text editor (eg. with vi: press **ESC**, then type **:x** followed by **ENTER**).
+
+- You can test run the startup file without exiting and re-entering your Bash shell environment. Issue the following:
+
+```bash
+. ~/.bashrc
+```
+
+- What do you notice?
+
+11. Issue the **alias** command. Does your clearfile alias exist?
+12. **Exit** your current termninal.
+13. Open a new terminal session and issue the **alias** command. Does your clearfile alias exist? Why or why not?
+
+- Did your start-up file customize your Bash shell environment with colours?
+- **NOTE:** This is where you can make your Linux shell environment values **persistent** (i.e. saved regardless of exit and login to your Bash Shell such as **aliases**, **umask**, **commands you want run on login**, etc.).
+
+14. How could you make default settings in **.bashrc** apply to all users on the system? (hint: Look back to lab 9 Investigation 1 Part 2).
+
+> If you ever want to restore your profile to it's previous settings, you could do so by copying the backup you created file to ~/.profile by issuing the following command: **mv ~/.bashrc.bk ~/.bashrc**. You do not need to do this.
+
+14. **Logout** of your Ubuntu VM and **Login** again.
+15. Open a terminal session.
+
+    - What did you notice this time?
+
+16. Issue the **alias** command. Does your clearfile alias exist?
+
+**Answer INVESTIGATION 1 observations / questions in your lab log book.**
+
+## Investigation 2: Additional Looping Statements
+
+In this investigation, you will learn additional loop statements to allow your shell scripts to be **more efficient**.
+
+**Perform the Following Steps:**
+
+1. **Login** to your Ubuntu VM and open a **terminal**, and issue a Linux command to **confirm** you are located in your **home** directory.
+2. Issue a command to **confirm** you are located in your home directory.
+
+### Creating your Github Repo for Lab 10
+
+- Browse to the [Lab 10 repository template](https://github.com/OPS145/lab10) on GitHub. You will be using this for Bash scripting in this lab.
+- Click **Use this template** in the right corner.
+- Select **Create a new repository** from the dropdown menu.
+- Select **Your GitHub username** from the **Owner** dropdown menu.
+- In the **Repository name** field enter **lab7**.
+- Set the visibility to **Private**.
+- Scroll to the bottom and click **Create repository**.
+- Follow the steps found in the README file to clone your repository locally.
+
+### Cloning your GitHub repository in your Ubuntu VM
+
+Issue the following command to clone your GitHub repository into your home directory.
+
+> **Important:** Be sure to replace `username` in the following command with YOUR GitHub username.
+
+```bash
+git clone git@github.com:username/lab10
+```
+
+- Issue a command to confirm the repository has been cloned on your Ubuntu VM.
+- Issue a command to change into your **lab10** directory.
+
+Confirm the contents have been written to your **lab10** directory. You should see the following files:
+
+- LICENSE
+- README.md
+- convert.bash
+- createusers.bash
+- createusers_test.py
+- githublogo.jpg
+- tux.jpg
+- ubuntu.jpg
+- userinfo.csv
+- users1.bash
+- users1_test.py
+- users2.bash
+- users2_test.py
+- users3.bash
+- users3_test.py
+
+### Writing users1.bash
+
+You are going write a bash script to define an array of usernames, and print the usernames one at a time.
+
+1. In GitHub Codespaces, open the template for the Bash shell script called **users1.bash**
+2. Edit _users1.bash_ file to contain the following:
+
+```bash
+#!/bin/bash
+# Author:
+# Date:
+# Purpose: To print a list of users (from an array) one user at a time.
+# Usage: ./users1.bash
+#
+
+# Populate the array users with usernames
+users=("tstark" "bbanner" "thor" "srogers" "nromanoff")
+
+# For each username in the array users
+for user in "${users[@]}"; do
+
+    # Use echo to display the username
+    echo $user
+
+# End for
+done
+```
+
+3. Issue the **chmod** command to add **execute permission** for the **user** the **users1.bash** file.
+
+4. Save your editing changes, stage and commit your changes to GitHub.
+
+5. Using the **terminal in Codespaces** issue the following to run the users1.bash:
+
+```bash
+./users1.bash
+```
+
+- What did you notice?
+
+```bash
+> ./users1.bash
+tstark
+bbanner
+thor
+srogers
+nromanoff
+```
+
+6. Run the Python check script in GitHub Codespaces to check your work before you commit it.
+
+```bash
+./users1_test.py
+```
+
+7. Check the exit status code. If it shows 0, it is successful.
+
+```bash
+echo $?
+```
+
+8. Save your changes. Stage and commit your changes to GitHub.
+
+On your **Ubuntu VM**, open a **terminal** and confirm you are in your **home** directory.
+
+9. Issue the following Linux command to change to the local clone of your GitHub repository.
+
+```bash
+cd lab10
+```
+
+10. Pull your changes into your **Ubuntu VM**
+
+```bash
+git pull
+```
+
+11. Run your script and observe the output.
+
+```bash
+./users1.bash
+```
+
+12. Did it work? Is the output the same as it was from the Codespaces terminal?
+
+### Writing users2.bash
+
+You are going write a bash script to populate an array of usernames from a csv file using command substitution, and print the usernames one at a time.
+
+1. In GitHub Codespaces, open the template for the Bash shell script called **users2.bash**
+2. Edit _users2.bash_ file to contain the following:
+
+```bash
+#!/bin/bash
+# Author:
+# Date:
+# Purpose: To populate the array users from the file userinfo.csv, and print a list of users, one user at a time.
+# Usage: ./users2.bash
+#
+
+# Populate the array users with usernames from the file userinfo.csv
+users=($(cut -d"," -f1 userinfo.csv))
+
+# Print a heading
+echo "Usernames:"
+
+# For each username in the array users
+for user in "${users[@]}"; do
+
+    # Use echo to display the username
+    echo "$user"
+
+# End for
+done
+```
+
+3. Issue the **chmod** command to add **execute permission** for the **user** the **users1.bash** file.
+
+4. Save your editing changes, stage and commit your changes to GitHub.
+
+5. Using the **terminal in Codespaces** issue the following to run the users1.bash:
+
+```bash
+./users2.bash
+```
+
+- What did you notice?
+
+```bash
+> ./users2.bash
+Usernames:
+tstark
+bbanner
+thor
+srogers
+nromanoff
+```
+
+6. Run the Python check script in GitHub Codespaces to check your work before you commit it.
+
+```bash
+./users2_test.py
+```
+
+7. Check the exit status code. If it shows 0, it is successful.
+
+```bash
+echo $?
+```
+
+8. Save your changes. Stage and commit your changes to GitHub.
+
+On your **Ubuntu VM**, open a **terminal** and confirm you are in your **home** directory.
+
+9. Issue the following Linux command to change to the local clone of your GitHub repository.
+
+```bash
+cd lab10
+```
+
+10. Pull your changes into your **Ubuntu VM**
+
+```bash
+git pull
+```
+
+11. Run your script and observe the output.
+
+```bash
+./users2.bash
+```
+
+12. Did it work? Is the output the same as it was from the Codespaces terminal?
+
+13. On your **Ubuntu VM** change to the lab-10-username repo directory:
+
+```bash
+cd lab10
+```
+
+14. Issue the following to run a checking script:
+
+```bash
+lab10-check-1
+```
+
+15. If you encounter errors, make corrections and **re-run** the checking script until you receive a congratulations message, then you can proceed.
+
+In the next investigation, you will learn more about the **for** loop, **while** loop and **error-checking.**
+
+**Answer INVESTIGATION 2 observations / questions in your lab log book.**
+
+## Investigation 3: Logic Within Loops and exit statements
+
+In this investigation, you will learn more about the **for** loop and **error-checking**.
+
+The **exit** statement is used to terminate a shell script. This statement is very useful when combined with logic in a shell script to display an **error message** if the command was **improperly executed** and **terminate** the running of the shell script.
+
+The _exit_ command can contain return a _value_ to provide the **exit status** of your shell script (i.e. TRUE or FALSE value).
+
+### Writing users3.bash
+
+You are going write a bash script to populate an associative array of usernames from a csv file which has been provided by the user as a command line argument. You will then print the usernames, full name and email one at a time separated into columns with appropriate headings.
+
+1. In GitHub Codespaces, open the template for the Bash shell script called **users3.bash**
+2. Edit _users3.bash_ file to contain the following:
+
+```bash
+#!/bin/bash
+# Author:
+# Date:
+# Purpose: To populate the array users from a file specified by the user as a command line argument, and print a list of users, one user at a time.
+# Usage: ./users3.bash <filename>
+#
+# Error Codes:
+#   1 - Incorrect number of command line arguments
+#   2 - File does not exist
+
+# If the number of command line arguments is not equal to 1
+if [[ $# -ne 1 ]]; then
+
+    # Use echo to display a message indicating the correct usage of the script
+    echo "Usage: ./users3.bash <filename>"
+
+    # Exit the script with an exit status of 1
+    exit 1
+
+# End if
+fi
+
+# If the file specified does not exist
+if [[ ! -f $1 ]]; then
+
+    # Use echo to display a message indicating that the file does not exist
+    echo "The file $1 does not exist."
+
+    # Exit the script with an exit status of 2
+    exit 2
+
+# End if
+fi
+
+# Declare associative array userInfo
+declare -A userInfo
+
+# Read the file line by line and populate the associative array userInfo
+while IFS=, read -r user name email; do
+    userInfo["$user,name"]="$name"
+    userInfo["$user,email"]="$email"
+done < "$1"
+
+# Print a heading
+printf "%-9s\t%-20s%-10s\n" "Username" "Full Name" "Email"
+
+# For each user in the associative array, print the username, full name, and email
+for key in "${!userInfo[@]}"; do
+
+    # If the key contains ",name", then
+    if [[ $key == *",name" ]]; then
+        user=${key%,*}
+
+        # Use printf to display the username, full name, and email separated by a tab
+        printf "%-9s\t%-20s%-10s\n" "$user" "${userInfo[$user,name]}" "${userInfo[$user,email]}"
+
+    # End if
+    fi
+
+# End for
+done
+```
+
+3. Issue the **chmod** command to add **execute permission** for the **user** the **users3.bash** file.
+
+4. Save your editing changes, stage and commit your changes to GitHub.
+
+5. Using the **terminal in Codespaces** issue the following to run the users3.bash (without arguments):
+
+```bash
+./users3.bash
+```
+
+- What did you notice?
+- Since there are no arguments, the test within the running shell script returns FALSE, then an **error message** with feedback of how to properly issue the shell script with an argument and then **terminates** the Bash shell script.
+- Notice that the **$0** positional parameter displays the **name** of the currently running shell script in the USAGE message. This is useful in case you decide to **change** the _name_ of the shell script at a later time.
+- The symbol **\>&2** redirects **standard output** from the USAGE message to **standard error** making like a real error message.
+- This "_neat redirection trick_" will NOT be considered for evaluation for this coverage.
+
+6. Issue the following Linux command:
+
+```bash
+echo $?
+```
+
+- What does this **exit status** from the previously issued command indicate?
+
+7. Issue the following command (with two arguments and redirecting stderr to a file):
+
+```bash
+./users3.bash users.csv 2> error.txt
+```
+
+- What did you notice this time?
+
+8. Issue the following Linux command:
+
+```bash
+echo $?
+```
+
+9. Issue the following Linux command to confirm that stderr was redirected to a file:
+
+```bash
+cat error.txt
+```
+
+10. Using the **terminal in Codespaces** issue the following to run the users3.bash:
+
+```bash
+./users3.bash userinfo.csv
+```
+
+- What did you notice?
+
+```bash
+> ./users3.bash userinfo.csv
+Username      Full Name           Email
+tstark        Tony Stark          ironman@avengers.org
+bbanner       Bruce Banner        hulk@avengers.org
+thor          Thor Odinson        thor@avengers.org
+srogers       Steve Rogers        captainamerica@avengers.org
+nromanoff     Natasha Romanoff    blackwidow@avengers.org
+```
+
+11. Run the Python check script in GitHub Codespaces to check your work before you commit it.
+
+```bash
+./users3_test.py
+```
+
+12. Check the exit status code. If it shows 0, it is successful.
+
+```bash
+echo $?
+```
+
+13. Save your changes. Stage and commit your changes to GitHub.
+
+On your **Ubuntu VM**, open a **terminal** and confirm you are in your **home** directory.
+
+14. Issue the following Linux command to change to the local clone of your GitHub repository.
+
+```bash
+cd lab10
+```
+
+15. Pull your changes into your **Ubuntu VM**
+
+```bash
+git pull
+```
+
+16. Run your script and observe the output.
+
+```bash
+./users3.bash userinfo.csv
+```
+
+17. Did it work? Is the output the same as it was from the Codespaces terminal?
+
+18. Issue the following to run a checking script:
+
+```bash
+lab10-check-2
+```
+
+19. If you encounter errors, make corrections and **re-run** the checking script until you receive a congratulations message, then you can proceed.
+
+**Answer INVESTIGATION 3 observations / questions in your lab log book.**
+
+## Investigation 4: Converting images from the command line with a script
+
+The `convert` command is a powerful tool in the Linux command line that allows you to convert images from one format to another with ease. This command is part of the ImageMagick suite, which provides a robust set of tools for image manipulation. The basic syntax for converting an image is:
+
+```bash
+convert sourcefilename.bmp destinationfilename.jpg
+```
+
+For example, to convert an image from PNG to JPG format, you would use:
+
+```bash
+convert example.png example.jpg
+```
+
+This command can handle a wide variety of image formats, including PNG, JPG, BMP, and many others. By leveraging the `convert` command, you can efficiently manage and transform your image files directly from the command line.
+
+```bash
+convert sourcefilename.bmp destinationfilename.jpg
+```
+
+### Writing convert.bash
+
+You are going write a bash script that:
+
+- Populates an array of image filenames using command substitution
+- Loops through the array using a for loop
+- Converts each image from a .jpg to a .png
+
+Using a bash script with an array and a for loop to convert images offers several benefits:
+
+- **Efficiency**: By storing directory contents in an array and using a for loop, you can convert all images in a directory with a single script execution.
+- **Flexibility**: The `convert` command supports various image file types (e.g., .png, .jpg, .bmp). You can easily modify the script to handle different file extensions.
+- **Simplicity**: The script simplifies the conversion process, making it easy to manage and execute, regardless of the number of files in the directory.
+
+1. In GitHub Codespaces, open the template for the Bash shell script called **convert.bash**
+2. Edit _convert.bash_ file to contain the following:
+
+```bash
+#!/bin/bash
+# Author:
+# Date:
+# Purpose: To convert all .jpg files in the current directory to .png.
+# Usage: ./convert.bash
+#
+
+# Populate the array images with all the filenames of all .jpg files in the current directory (without their extension).
+images=($(ls | grep "jpg$" | sed 's/\.jpg/ /'))
+
+# For each filename in the array images
+for file in "${images[@]}"; do
+
+    # Convert the .jpg file to a .png file
+	convert $file.jpg $file.png
+
+    # Remove the .jpg file
+	rm $file.jpg
+
+# End for
+done
+
+# Indicate that the conversion is complete
+echo "Image conversion completed."
+```
+
+3. Issue the **chmod** command to add **execute permission** for the **user** the **users3.bash** file.
+
+4. Save your editing changes, stage and commit your changes to GitHub.
+
+Since the convert command isn't available in Codespaces, we can neither test this script from the command line or run a check script in Codespaces to check the script. On your **Ubuntu VM**, open a **terminal** and confirm you are in your **home** directory.
+
+5. Install the convert command from the imagemagick suite.
+
+```bash
+sudo apt -y install imagemagick
+```
+
+6. Issue the following Linux command to change to the local clone of your GitHub repository.
+
+```bash
+cd lab10
+```
+
+7. Pull your changes into your **Ubuntu VM**
+
+```bash
+git pull
+```
+
+8. Issue the `ls` command and note the images are currently jpgs.
+
+9. Issue the file command on each of the jpgs in your directory. Note the output.
+
+10. Run your script and observe the output.
+
+```bash
+./convert.bash
+```
+
+11. Issue the `ls` command to confirm all the images in your directory were converted to pngs.
+
+12. Issue the `file` command on each of the pngs in your directory.
+
+13. Did the script work?
+
+14. Issue the following to run a checking script:
+
+```bash
+lab10-check-3
+```
+
+In the next investigation, you will learn to use the **exit** statement to **terminate the execution of a shell script** if not run with the properly number of arguments, parse command line options using getopts and a case statement; and write a Bash script to automate adding users to the system.
+
+**Answer INVESTIGATION 4 observations / questions in your lab log book.**
+
+## Further Study
+
+I hope this series of labs has been helpful in teaching you basic Linux OS skills.
+
+In order to get efficient in working in the Linux environment requires **practice** and **applying** what you have learned to perform Linux operating system administration including: **user management**, **installing and removing applications**, **network services** and **network security**.
+
+You will gain further Linux knowledge and explore these skills in your future Linux courses including:
+
+- [OPS245: Open Systems Server](https://seneca-ictoer.github.io/OPS245/)
+- [OPS345: Administration of Open Source Systems](https://seneca-ictoer.github.io/OPS345/)
+
+Take care and good luck in your future endeavours **:)**
+
+_Murray Saul_
+
+## Linux Practice Questions
+
+The purpose of this section is to obtain **extra practice** to help with **quizzes**, your **midterm**, and your **final exam**.
+
+Your instructor may take-up these questions during class. It is up to the student to attend classes in order to obtain the answers to the following questions. Your instructor will NOT provide these answers in any other form (eg. e-mail, etc).
+
+**Review Questions:**
+
+1. What is the purpose of the **/etc/profile** startup file?
+2. What is the purpose of the **/etc/bashrc** startup file?
+3. What is the purpose of the **~/.bashrc** startup file?
+4. What is the purpose of the **~/.bash_profile** file?
+5. What is the purpose of the **~/.bash_logout** file?
+6. Write code for the **~/.bash_profile** file below to clear the screen, welcome the user by their username, and display a list of all users currently logged in. Insert blank lines between each of those elements.
+7. Write a command to run the recently created **~/.bash_profile** startup file from the previous question without exiting and re-logging in or relaunching your terminal.
+8. What is the difference between an **array** and an **associative array**?
+9. How do you exit a bash script indicating an error?
+10. What is getopts used for?
