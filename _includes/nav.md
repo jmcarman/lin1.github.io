@@ -8,3 +8,11 @@ Update the content as follows:
 - [Home]({{ '/index.html' | relative_url }}){% if page.url == '/' or page.url == '/index.html' %}{: .active}{% endif %}
 - [Lab 1]({{ '/lab1.html' | relative_url }}){% if page.url == '/lab1.html' %}{: .active}{% endif %}
 - [Lab 2]({{ '/lab2.html' | relative_url }}){% if page.url == '/lab2.html' %}{: .active}{% endif %}
+- [Lab 3]({{ '/lab3.html' | relative_url }}){% if page.url == '/lab3.html' %}{: .active}{% endif %}
+- [Lab 4]({{ '/lab4.html' | relative_url }}){% if page.url == '/lab4.html' %}{: .active}{% endif %}
+- [Lab 5]({{ '/lab5.html' | relative_url }}){% if page.url == '/lab5.html' %}{: .active}{% endif %}
+- [Lab 6]({{ '/lab6.html' | relative_url }}){% if page.url == '/lab6.html' %}{: .active}{% endif %}
+- [Lab 7]({{ '/lab7.html' | relative_url }}){% if page.url == '/lab7.html' %}{: .active}{% endif %}
+- [Lab 8]({{ '/lab8.html' | relative_url }}){% if page.url == '/lab8.html' %}{: .active}{% endif %}
+- [Lab 9]({{ '/lab9.html' | relative_url }}){% if page.url == '/lab9.html' %}{: .active}{% endif %}
+- [Lab 10]({{ '/lab10.html' | relative_url }}){% if page.url == '/lab10.html' %}{: .active}{% endif %}

@@ -3,9 +3,9 @@ defaults:
       path: ""
     values:
       layout: default
-url: "https://jmcarman.github.io/"
-baseurl: "/lin1.github.io/"
+url: "https://lin1.jmcarman.tech/"
+baseurl: "/"
 author: "Jason Carman & Murray Saul"
-description: "Course website"
+description: "Introduction to Linux"
 keywords: "introduction to linux, linux, github, open source, cnet206"
 license: "CC BY-SA"
