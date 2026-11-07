@@ -654,7 +654,7 @@ mkdir ~/bin
 3. Clone the lab check script repository from GitHub into your ~/bin directory:
 
 ```bash
-git clone https://github.com:OPS145/labs ~/bin
+git clone https://github.com:CNET206/labs ~/bin
 ```
 
 4. Make certain that your current directory is **your home directory** by entering the following Linux command:
