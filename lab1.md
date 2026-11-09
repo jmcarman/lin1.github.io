@@ -42,8 +42,19 @@ description: Setup and use a Linux environment
 
 **General Linux Commands:**
 
-| [pwd](http://man7.org/linux/man-pages/man1/pwd.1.html) | [cd](http://man7.org/linux/man-pages/man1/cd.1p.html) | [ls](http://man7.org/linux/man-pages/man1/ls.1p.html) | [cal](http://man7.org/linux/man-pages/man1/cal.1.html) | [date](http://man7.org/linux/man-pages/man1/date.1.html) | [who](http://man7.org/linux/man-pages/man1/who.1.html) , [w](http://man7.org/linux/man-pages/man1/w.1.html) | [whoami, who am i](http://man7.org/linux/man-pages/man1/whoami.1.html) | [clear, ctrl+l](http://man7.org/linux/man-pages/man1/clear.1.html) | [sudo](https://man7.org/linux/man-pages/man8/sudo.8.html) | [ping](https://man7.org/linux/man-pages/man8/ping.8.html) | [apt](https://ss64.com/bash/apt.html) |
-| :----------------------------------------------------- | :---------------------------------------------------- | :---------------------------------------------------- | :----------------------------------------------------- | :------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------- | :---------------------------------------------------------------------- | :-------------------------------------------------------- | :-------------------------------------------------------- | :------------------------------------ | :---------------------- |
+| Command | Documentation |
+|:--------|:--------------|
+| `pwd` | [pwd(1)](http://man7.org/linux/man-pages/man1/pwd.1.html) |
+| `cd` | [cd(1p)](http://man7.org/linux/man-pages/man1/cd.1p.html) |
+| `ls` | [ls(1p)](http://man7.org/linux/man-pages/man1/ls.1p.html) |
+| `cal` | [cal(1)](http://man7.org/linux/man-pages/man1/cal.1.html) |
+| `date` | [date(1)](http://man7.org/linux/man-pages/man1/date.1.html) |
+| `who`, `w` | [who(1)](http://man7.org/linux/man-pages/man1/who.1.html), [w(1)](http://man7.org/linux/man-pages/man1/w.1.html) |
+| `whoami`, `who am i` | [whoami(1)](http://man7.org/linux/man-pages/man1/whoami.1.html) |
+| `clear`, `Ctrl+L` | [clear(1)](http://man7.org/linux/man-pages/man1/clear.1.html) |
+| `sudo` | [sudo(8)](https://man7.org/linux/man-pages/man8/sudo.8.html) |
+| `ping` | [ping(8)](https://man7.org/linux/man-pages/man8/ping.8.html) |
+| `apt` | [apt guide](https://ss64.com/bash/apt.html) |
 
 ## Key Concepts
 
