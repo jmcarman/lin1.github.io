@@ -156,9 +156,9 @@ If you are working on a college PC, launch **MyApps** and search for **VirtualBo
 1. Click on **Settings** > **Storage** > **Controller:IDE** >> **Choose a disk file** (see the following screenshot). Browse to the ISO you downloaded and click **Open**.
    ![Adding the optical disk](/img/choose-disk.png)
 
-9. Click **ok** and power on the virtual machine.
+10. Click **ok** and power on the virtual machine.
+11. Select **Try or Install Ubuntu** and press **Enter**.
 
-10. Select **Try or Install Ubuntu** and press **Enter**.
     ![Try or Install Ubuntu](/img/grub.png)
 
 Follow the installer and select the following settings:
