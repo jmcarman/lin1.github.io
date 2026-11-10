@@ -116,10 +116,10 @@ _Examples of commands that use command history:_
 
 ## Investigation 1: Downloading and Installing Linux
 
-In this section, you will learn how to Install Linux (Ubuntu) as a Virtual Machine using Oracle VirtualBox:
+In this section, you will learn how to Install Linux (Ubuntu) as a Virtual Machine using VMware Workstation:
 
-- You can install VirtualBox on your **home computer**
-- You can use VirtualBox on **any PC in a Seneca Polytechnic** labs via **MyApps**
+- You can install VMware Workstation on your **home computer**
+- You can use VMware Workstation on **PCs in the Centennial College** classrooms
 
 **ATTENTION: This lab must be graded by the end of your classes in Week 8 to obtain a grade of 2% towards this course.**
 
@@ -127,34 +127,39 @@ It is essential that you complete these labs fully and on time. These are your m
 
 Download the [Ubuntu 26.04 iso](https://ubuntu.com/download/desktop) if you have not already. Make sure you download Ubuntu Desktop, not server.
 
-If you are working on your home PC, you will need to download and install Oracle VirtualBox before continuing.
-If you are working on a college PC, launch **MyApps** and search for **VirtualBox**. Launch the program.
+If you are working on your home PC, you will need to download and install VMware Workstation before continuing.
+If you are working on a college PC, launch **VMware Workstation**
 
-1. Open VirtualBox. Your screen should look as follows:
+### Creating an Ubuntu Virtual Machine (VM)
+1. Launch **VMware Workstation**. Your screen shoud look like the output below:
 
-![Launching Oracle VirtualBox](/img/launch-vb.png)
 
-2. Click on the New icon and Create a virtual machine, insert the following information and click **Next**.
+![Launching VMware Workstation](/img/vmware-workstation.png)
 
-  - Name: Ubuntu-yoursenecaid IE: **Ubuntu-jmcarman**
-  - Machine Folder: **Browse to your SSD**
-  - Type: **Linux**
-  - Version: **Ubuntu (64-bit)**
+2. Click **Create a New Virtual Machine**
+1. Under **What type of configuration do you want** select **Typical** and click **Next >**
+1. Select **I will install the operating system later** and click **Next >**
+1. Under **Select a Guest Operating System**
+    - **Guest Operating System** select **Linux**
+    - **Version** select **Ubuntu**
+    - click **Next >**
+1. Under **Name the Virtual Machine**
+    - For **Virtual machine name** enter **ubuntu-** followed by the first part of your email (ie **win11-jmcarman**)
+    - For **Location** create a new folder on your external drive called **CNET206**, browe to it and click **OK**.
+    - Click **Next >**
+1. For **Specify Disk Capactiy**
+    - Set the **Maximum disk size (GB):** to **20.0** GB
+    - Select **Split virtual machine into multiple files**
+    - Click **Next >**
 
-3. Assign it 8GB of ram (8192 MB).
+1. View the settings to confirm they are correct
+    - Click **Finish**
 
-1. Assign the processor 4 cores and click **Next**.
+1. Under **Devices** click on **CD/DVD (SATA)**
+   - Select **Use ISO image file:**
+   - Browse to the location of the ISO you downloaded earlier and click **Open**
 
-1. Select **Create a virtual hard disk now** and click **Create**.
-
-1. Select VDI (VirtualBox Disk Image) as the Hard disk file type and click **Next**.
-
-1. Select **Dynamically allocated** and click **Next**.
-
-1. Set the **Disk Size** to **50.00 GB** and click **Create**.
-
-1. Click on **Settings** > **Storage** > **Controller:IDE** >> **Choose a disk file** (see the following screenshot). Browse to the ISO you downloaded and click **Open**.
-   ![Adding the optical disk](/img/choose-disk.png)
+   ![Adding the optical disk](/img/choose-disk-vmware.png)
 
 10. Click **ok** and power on the virtual machine.
 11. Select **Try or Install Ubuntu** and press **Enter**.
@@ -163,10 +168,10 @@ If you are working on a college PC, launch **MyApps** and search for **VirtualBo
 
 Follow the installer and select the following settings:
 
-- Language: English
+- Language: **English**
 - Accessibility: Customize if you wish or accept the defaults
-- Keyboard Layout: English (US)
-- Connect to the internet: Use wired connection (default)
+- Keyboard Layout: **English (US)**
+- Connect to the internet: **Use wired connection** (default)
 - What do you want to do with Ubuntu?: **Install Ubuntu**
 - How would you like to install Ubuntu?: **Interactive installation**
 - What apps would you like to install to start with?: **Default selection**
@@ -174,10 +179,11 @@ Follow the installer and select the following settings:
   - **Install third-party software for graphics and Wi-Fi hardware**
   - **Download and install support for additional media formats**
 - How do you want to install Ubuntu?: **Erase disk and install Ubuntu** (default)
+- Encryption and file system: **No encryption**
 - Create your account:
   - Your name: **enter your name**
-  - Your computer's name: **ubuntu-senecausername** IE **ubuntu-jmcarman**
-  - Your username: **Your Seneca username**
+  - Your computer's name: **ubuntu-firstpartofemail** IE **ubuntu-jmcarman**
+  - Your username: **firstpartofemail** IE **jmcarman**
   - Create a secure password that you will remember
   - Confirm your configuration using the following screenshot before clicking **Next**
     ![User account information](/img/ubuntu-account.png)
