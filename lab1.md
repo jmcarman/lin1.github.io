@@ -186,7 +186,9 @@ Follow the installer and select the following settings:
   - Your username: **firstpartofemail** IE **jmcarman**
   - Create a secure password that you will remember
   - Confirm your configuration using the following screenshot before clicking **Next**
+
     ![User account information](/img/ubuntu-account.png)
+    
 - Select your timezone: **Toronto**
 - Click **Install** and be prepared to wait patiently for a while.
 - When it is done, click **Restart now**.
