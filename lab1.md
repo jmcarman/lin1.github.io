@@ -7,7 +7,7 @@ description: Setup and use a Linux environment
 
 ## Main Objectives
 
-- Learn how to install Linux (Ubuntu) as a Virtual Machine using Oracle VirtualBox.
+- Learn how to install Linux (Ubuntu) as a Virtual Machine using VMware Workstation.
 - Understand the Linux command structure and how to get help with Linux command usage.
 - Become efficient with Linux command line editing by using short-cut keys.
 - Issue a checking program (i.e. Shell Script) to confirm that you installed your virtual machine.
@@ -22,7 +22,7 @@ description: Setup and use a Linux environment
 
 **Software:**
 
-- [Virtual Box](https://www.virtualbox.org/wiki/Downloads)
+- [VMware Workstation Download](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion)
 - [Ubuntu 26.04 Download](https://ubuntu.com/download/desktop)
 
 **Ubuntu Resources:**
@@ -94,21 +94,21 @@ The virtualized OS is installed and run in a window under another OS. Special so
 2. Your **BIOS** should be set to **enable Virtualization**.
 3. Popular VM software for **Windows**, **Apple** and **Linux** OS include:
 
-   - VMware (Paid - though free to you through Seneca)
+   - VMware Workstation/Fusion (Free and Closed Source)
    - Oracle Virtual Box (Free and Open Source)
    - Hyper-V (Microsoft native virtualization. Closed Source.)
    - KVM (Linux native virtualization. Open Source.)
 
-You will be using Oracle Virtual Box.
+You will be using VMware Workstation.
 
 ### Command History
 
 The filename **~/.bash_history** stores recently executed command lines
 
 _Examples of commands that use command history:_
-
-| **up arrow** or **down arrow** | move to **previous** command or **next** command within Bash shell prompt                   |
+| Command | Explanation |
 | :----------------------------- | :------------------------------------------------------------------------------------------ |
+| **up arrow** or **down arrow** | move to **previous** command or **next** command within Bash shell prompt                   |
 | **fc -l**                      | display last **16** commands                                                                |
 | **history \| more**            | display all stored commands                                                                 |
 | **!num**                       | **re-execute** an issued command number by command number (determined from history command) |
@@ -671,7 +671,7 @@ mkdir ~/bin
 3. Clone the lab check script repository from GitHub into your ~/bin directory:
 
 ```bash
-git clone https://github.com:CNET206/labs ~/bin
+git clone https://github.com/CNET206/labs ~/bin
 ```
 
 4. Make certain that your current directory is **your home directory** by entering the following Linux command:
