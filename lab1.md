@@ -725,7 +725,7 @@ Your instructor may take-up these questions during class. It is up to the studen
 4. Explain why installing **Multi-boot** for Linux is useful for **computer troubleshooting**.
 5. Define the term **Virtualization**.
 6. List the **steps** to install software or update your Ubuntu system.
-7. Define the term '_repo_. What are repos (repositories) used for? What one did you add to your VM?
+7. Define the term _repo_. What are repos (repositories) used for? What one did you add to your VM?
 8. What is **sudo**?
 9. List 3 unique ways to **log-out** of your Ubuntu system (not including closing the Terminal window or application).
 10. How do you shutdown your Ubuntu system?
