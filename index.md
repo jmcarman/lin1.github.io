@@ -1,5 +1,5 @@
 ---
-title: Homepage
+title: Course Schedule
 description: Course schedule
 ---
 
