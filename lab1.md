@@ -276,10 +276,16 @@ Once that has completed, install the following packages with the command **sudo 
 - chromium
 
 ```bash
-sudo apt -y install tldr cinnamon-desktop-experience lightdm chromium
+sudo apt -y install cinnamon-desktop-experience lightdm chromium
 ```
 
 What was different compared to installing the software with the inclusion of the **-y** option?
+
+Install the tldr command (you will use this later in the lab):
+
+```bash
+sudo snap install tldr
+```
 
 ### Configuring the Cinnamon desktop
 To allow **Cinnamon** to function you must first configure the display manager to use **lightdm**. Issue the following command, and select lightdm from the menu.
