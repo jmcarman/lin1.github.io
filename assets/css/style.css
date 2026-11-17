@@ -135,7 +135,7 @@ nav ul li.right {
 table {
 	margin-left: auto;
 	margin-right: auto;
-	font-size: 1.5em;
+	font-size: 1em;
 }
 
 div#table {
@@ -146,7 +146,7 @@ div#table {
 .md-table {
 	margin-left: auto;
 	margin-right: auto;
-	font-size: 1.5em;
+	font-size: 1em;
 	overflow-x: auto;
 }
 
@@ -158,7 +158,7 @@ div#table {
 td, th, .md-td, .md-th {
 	border: .1em solid #333333;
 	border-radius: .25em;
-	padding: 1em;
+	padding: .5em;
 	text-align: center;
 }
 
