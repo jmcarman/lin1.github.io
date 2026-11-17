@@ -342,7 +342,7 @@ An **argument** must be separated from a command (and from other arguments) by w
 **Perform the Following Steps:**
 
 1. Confirm that you are logged into your Ubuntu virtual machine and have the **Terminal** open.
-2. Issue the following Linux command:
+1. Issue the following Linux command:
 
 ```bash
 pwd
@@ -515,7 +515,7 @@ The man utility is an interactive collection of manual pages that provides infor
 | :-------------------- | :------------------: |
 | **ENTER**             |  Move down one line  |
 | **SPACEBAR**          | Move one screen down |
-| **ctrl + b**       |  Move one screen up  |
+| **ctrl + b**          |  Move one screen up  |
 | **/pattern/**         |  Search for Pattern  |
 | **q**                 |   quit man utility   |
 
@@ -532,7 +532,7 @@ man ls
    - **"use a long listing format"**
    - **"do not ignore entries starting with ."** (i.e. hidden files)
    - **"sort by file size"**
-   - **"append indicator (one of \*/=>&|) to entries"** (i.e. type of file)
+   - **"append a character to each file name indicating the file type"**
 
 8. Exit the man utility.
 9. Issue the `ls` command using _each_ of those option letters you noted in **step 5** to see how the command's output changes with each option.

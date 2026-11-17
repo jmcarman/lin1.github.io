@@ -21,13 +21,30 @@ description: Unix/Linux File Management
 
 **File Management Reference:**
 
-| [pwd](http://man7.org/linux/man-pages/man1/pwd.1.html) | [cd](http://man7.org/linux/man-pages/man1/cd.1p.html) | [ls](http://man7.org/linux/man-pages/man1/ls.1p.html) | [tree](https://www.systutorials.com/docs/linux/man/1-tree/) | [mkdir](http://man7.org/linux/man-pages/man1/mkdir.1.html) | [rmdir](http://man7.org/linux/man-pages/man1/rmdir.1.html) | [cp](http://man7.org/linux/man-pages/man1/cp.1.html) | [mv](http://man7.org/linux/man-pages/man1/mv.1p.html) | [rm , rm -r](http://man7.org/linux/man-pages/man1/rm.1.html) |
-| :----------------------------------------------------- | :---------------------------------------------------- | :---------------------------------------------------- | :---------------------------------------------------------- | :--------------------------------------------------------- | :--------------------------------------------------------- | :--------------------------------------------------- | :---------------------------------------------------- | :----------------------------------------------------------- |
+- [pwd](http://man7.org/linux/man-pages/man1/pwd.1.html)
+- [cd](http://man7.org/linux/man-pages/man1/cd.1p.html)
+- [ls](http://man7.org/linux/man-pages/man1/ls.1p.html)
+- [tree](https://www.systutorials.com/docs/linux/man/1-tree/)
+- [mkdir](http://man7.org/linux/man-pages/man1/mkdir.1.html)
+- [rmdir](http://man7.org/linux/man-pages/man1/rmdir.1.html)
+- [cp](http://man7.org/linux/man-pages/man1/cp.1.html)
+- [mv](http://man7.org/linux/man-pages/man1/mv.1p.html)
+- [rm , rm -r](http://man7.org/linux/man-pages/man1/rm.1.html)
 
 **Text Editors and File Content Reference:**
 
-| [vi](http://man7.org/linux/man-pages/man1/vi.1p.html) , [nano](https://linux.die.net/man/1/nano) | [cat](http://man7.org/linux/man-pages/man1/cat.1.html) | [more](http://man7.org/linux/man-pages/man1/more.1.html) , [less](http://man7.org/linux/man-pages/man1/less.1.html) | [head](http://man7.org/linux/man-pages/man1/head.1.html) , [tail](http://man7.org/linux/man-pages/man1/tail.1.html) | [touch](http://man7.org/linux/man-pages/man1/touch.1.html) | [file](http://man7.org/linux/man-pages/man1/file.1.html) | [find](http://man7.org/linux/man-pages/man1/find.1.html) | [diff](http://man7.org/linux/man-pages/man1/diff.1.html) | [sort](http://man7.org/linux/man-pages/man1/sort.1.html) | [uniq](http://man7.org/linux/man-pages/man1/uniq.1.html) | [grep](http://linuxcommand.org/lc3_man_pages/grep1.html) |
-| :----------------------------------------------------------------------------------------------- | :----------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------ | :--------------------------------------------------------- | :------------------------------------------------------- | :------------------------------------------------------- | :------------------------------------------------------- | :------------------------------------------------------- | :------------------------------------------------------- | :------------------------------------------------------- |
+- [vi](http://man7.org/linux/man-pages/man1/vi.1p.html) , [nano](https://linux.die.net/man/1/nano)
+- [cat](http://man7.org/linux/man-pages/man1/cat.1.html)
+- [more](http://man7.org/linux/man-pages/man1/more.1.html) , [less](http://man7.org/linux/man-pages/man1/less.1.html)
+- [head](http://man7.org/linux/man-pages/man1/head.1.html) , [tail](http://man7.org/linux/man-pages/man1/tail.1.html)
+- [touch](http://man7.org/linux/man-pages/man1/touch.1.html)
+- [file](http://man7.org/linux/man-pages/man1/file.1.html)
+- [find](http://man7.org/linux/man-pages/man1/find.1.html)
+- [diff](http://man7.org/linux/man-pages/man1/diff.1.html)
+- [sort](http://man7.org/linux/man-pages/man1/sort.1.html)
+- [uniq](http://man7.org/linux/man-pages/man1/uniq.1.html)
+- [grep](http://linuxcommand.org/lc3_man_pages/grep1.html)
+
 
 **Text Editor Cheat Sheets:**
 
