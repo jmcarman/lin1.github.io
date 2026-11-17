@@ -601,7 +601,7 @@ cd /bin
 
    - **NOTE:** To make **alt-f** key work when use the **GRAPHICAL Windows SSH Client application**, select **Edit -> Settings -> Keyboard**, and select the checkbox **Use ALT as Meta key (and Escape).**
 
-![To make alt-f key work, select Edit -> Settings -> Keyboard, and select the checkbox Use ALT as Meta key (and Escape).](/img/Meta-key.png 'To make alt-f key work, select Edit -> Settings -> Keyboard, and select the checkbox Use ALT as Meta key (and Escape).')
+![To make alt-f key work, select Edit -> Settings -> Keyboard, and select the checkbox Use ALT as Meta key (and Escape).](/img/Meta-key.png)
 
 3. Press the `alt-f` key combination two times
 
@@ -611,7 +611,7 @@ cd /bin
 
    - (OPTION+left-arrow for Mac OSx).
 
-![Ctrl-b](/img/Ctrl-b.png 'Ctrl B')
+![Ctrl-b](/img/Ctrl-b.png)
 
 - **alt-b** moves one word backwards for Windows OS
 
@@ -619,7 +619,7 @@ cd /bin
 
 - What happens?
 
-![Ctrl W](/img/Ctrl-w.png 'Ctrl W')
+![Ctrl W](/img/Ctrl-w.png)
 
 - **ctrl-w** deletes a word to left of the cursor.
 
@@ -643,7 +643,7 @@ cd /bin
 12. Press the `ctrl-u` key combination to clear the line.
 13. Press the `ctrl-l key` combination. What happens? What is the advantage of using **ctrl-u** as opposed to **ctrl-l**?
 
-The Bash shortcut keys that you just learned are sufficient to perform Bash Shell editing. Although you are NOT required to learn other short-cut keys, here is a link to a listing in case you are interested: https://ostechnix.com/list-useful-bash-keyboard-shortcuts/
+The Bash shortcut keys that you just learned are sufficient to perform Bash Shell editing. Although you are NOT required to learn other short-cut keys, here is a link to a listing in case you are interested: [useful bash keyboard shortcuts](https://ostechnix.com/list-useful-bash-keyboard-shortcuts/)
 
 **Answer INVESTIGATION 3 observations / questions in your lab log book.**
 
