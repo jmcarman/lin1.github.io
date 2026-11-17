@@ -106,13 +106,14 @@ You will be using VMware Workstation.
 The filename **~/.bash_history** stores recently executed command lines
 
 _Examples of commands that use command history:_
+
 | Command | Explanation |
-| :----------------------------- | :------------------------------------------------------------------------------------------ |
-| **up arrow** or **down arrow** | move to **previous** command or **next** command within Bash shell prompt                   |
-| **fc -l**                      | display last **16** commands                                                                |
-| **history \| more**            | display all stored commands                                                                 |
-| **!num**                       | **re-execute** an issued command number by command number (determined from history command) |
-| **!xxx**                       | **re-run** a most recent previously-issued command beginning with string "xxx"              |
+| :----------------------------- | :----------------------------------- |
+| **up arrow** or **down arrow** | move to **previous** command or **next** command within Bash shell prompt |
+| **fc -l** | display last **16** commands |
+| **history \| more** | display all stored commands |
+| **!num** | **re-execute** an issued command number by command number (determined from history command) |
+| **!xxx** | **re-run** a most recent previously-issued command beginning with string "xxx" |
 
 ## Investigation 1: Downloading and Installing Linux
 
