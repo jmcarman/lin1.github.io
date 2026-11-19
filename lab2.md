@@ -147,19 +147,19 @@ You will be creating the following **directory structure** within your home dire
 
 ![Directory Structure 3](/img/1_-_700px-Directory-structure-3.png)
 
-**Tree Diagram** of Directory Structure to Create in your **Home** Directory (displayed in blue text).
+**Tree Diagram** of Directory Structure to Create in your **Home** Directory.
 
 **Perform the Following Steps:**
 
-**NOTE:** For several of the following commands, you will be using **your Seneca username** to replace the text:"**your-seneca-id**" in a pathname.
+**NOTE:** For several of the following commands, you will be using **your username** to replace the text:"**yourusername**" in a pathname.
 
-For example, if your Seneca user ID was **mkhan** then you would display the pathname _/home/your-seneca-id_ as: **/home/mkhan**
+For example, if your username was **mkhan** then you would display the pathname _/home/yourusername_ as: **/home/mkhan**
 
 1. Confirm that you are logged into your Ubuntu virtual machine and have the **Terminal** open.
 2. Issue the following Linux command:
 
 ```bash
-mkdir /home/your-seneca-id/osl640xx
+mkdir /home/yourusername/files
 ```
 
 - (remember: use your Seneca username instead of "your-seneca-id")
@@ -168,7 +168,7 @@ mkdir /home/your-seneca-id/osl640xx
 4. Issue the following Linux command:
 
 ```bash
-ls /home/your-seneca-id/osl640xx
+ls /home/yourusername/files
 ```
 
 - There are no contents that are contained in this newly-created directory; therefore, no contents appear. A useful option **-d** can be used to confirm that the actual directory has been created as opposed to viewing the contents of the directory.
@@ -176,7 +176,7 @@ ls /home/your-seneca-id/osl640xx
 5. Issue the following Linux command:
 
 ```bash
-ls -d /home/your-seneca-id/osl640xx
+ls -d /home/yourusername/files
 ```
 
 - You should now see just the directory listed. You can also combine the **-d** and **-l** options to provide more detail regarding the newly-created directory.
@@ -184,28 +184,25 @@ ls -d /home/your-seneca-id/osl640xx
 6. Issue the following Linux command:
 
 ```bash
-ls -d -l /home/your-seneca-id/osl640xx
+ls -d -l /home/yourusername/files
 ```
 
-- How can you confirm from the output of this command that the file osl640xx is a directory?
+- How can you confirm from the output of this command that the file linux is a directory?
 
 7. Issue the following Linux command:
 
 ```bash
-ls -ld /home/your-seneca-id/osl640xx
+ls -ld /home/yourusername/files
 ```
 
 - Is the output from this command the same was the output from the previous command?
 - If so, what does this say about how to use multiple options for Linux commands?
 
-![Create Confirm](/img/2-create-confirm.png)
 
-- **Creating** and **Confirming** the Creation of a Directory.
-
-8. Issue the following Linux command to create the **osm620xx** and **nwk680xx** directories:
+8. Issue the following Linux command to create the **linux**, **windows** and **cisco** directories:
 
 ```bash
-mkdir /home/your-seneca-id/osm620xx /home/your-seneca-id/nwk680xx
+mkdir /home/yourusername/files/linux /home/yourusername/files/windows /home/yourusername/files/cisco
 ```
 
 - **NOTE:** You can create multiple directories by issuing the **mkdir** command with multiple arguments.
@@ -213,18 +210,18 @@ mkdir /home/your-seneca-id/osm620xx /home/your-seneca-id/nwk680xx
 9. Issue the following Linux command to confirm that those directories have been created:
 
 ```bash
-ls -ld /home/your-seneca-id/osm620xx /home/your-seneca-id/nwk680xx
+ls -ld /home/yourusername/files/windows /home/yourusername/files/cisco
 ```
 
 - **Using a FULL pathname starting from the root directory (i.e. /) requires is a LOT of typing!. Since we are already located in our home directory, we don't have to start from the root directory. This is called a "relative" pathname.**
 
-10. We will now create the subdirectories that are contained in the **osl640xx** directory. Issue the following Linux command to move to the **osl640xx** directory using a **relative** pathname:
+10. We will now create the subdirectories that are contained in the **linux** directory. Issue the following Linux command to move to the **linux** directory using a **relative** pathname:
 
 ```bash
-cd osl640xx
+cd files/linux
 ```
 
-11. Issue a Linux command to confirm that your current location is in the _osl640xx_ directory. You should know how to issue this command from a previous lab.
+11. Issue a Linux command to confirm that your current location is in the _linux_ directory. You should know how to issue this command from a previous lab.
 12. Issue the following Linux command to create the directories called **notes**, **tutorials** and **samples**:
 
 ```bash
@@ -234,8 +231,7 @@ mkdir notes tutorials samples
 13. Issue a Linux command to confirm that those directories have been created. (you should already know how to do this).
 
     - There are better ways to create the same directory structure without using the **cd** command.
-    - Issuing the **cd** command **prior** to issuing other commands indicates to others that you are a novice or "**newbie**".
-    - You can actually **lose marks** on quizzes or tests if you issue multiple Linux commands to performed tasks that can be performed using a single Linux command with **pathnames**.
+    - Issuing the **cd** command **prior** to issuing other commands adds additional, unnecessary steps.
 
 14. Issue the following Linux command to return to your home directory:
 
@@ -250,14 +246,14 @@ cd
 16. Issue the following Linux command to remove all of the directories that you have created:
 
 ```bash
-rm -r osl640xx osm620xx nwk680xx
+rm -r files/linux files/windows files/cisco
 ```
 
-17. Issue a Linux command to confirm that the **osl640xx**, **osm620xx** and **nwk680xx** directories have been removed.
+17. Issue a Linux command to confirm that the **linux**, **windows** and **cisco** directories have been removed.
 18. Issue the following single Linux command to create the entire directory structure:
 
 ```bash
-mkdir -p osl640xx/notes osl640xx/tutorials osl640xx/samples osm620xx nwk680xx
+mkdir -p files/linux/notes files/linux/tutorials files/linux/samples files/windows files/cisco
 ```
 
 - **NOTE:** The **-p** option allows "parent" directories to be automatically created first to then create their subdirectories.
@@ -265,7 +261,7 @@ mkdir -p osl640xx/notes osl640xx/tutorials osl640xx/samples osm620xx nwk680xx
 19. Issue the following Linux command to confirm that all of the directories have been created:
 
 ```bash
-ls -ld osl640xx/ osl640xx/notes osl640xx/tutorials osl640xx/samples osm620xx nwk680xx
+ls -ld files/linux/ files/linux/notes files/linux/tutorials files/linux/samples files/windows files/cisco
 ```
 
 **Running a Shell Script to Check your Work**
@@ -320,7 +316,8 @@ Output of the tree command to display directory structure.
 
 ![Tree -lr output](/img/4-lsr.png)
 
-2. Issue the following Linux command:
+3. Issue a command to change into the **/home/yourusername/files** directory.
+1. Issue the following Linux command:
 
 ```bash
 ls -lR
@@ -328,36 +325,36 @@ ls -lR
 
 - What directories do you see?
 
-3. Issue the following Linux command:
+5. Issue the following Linux command:
 
 ```bash
-ls -lR osl640xx
+ls -lR linux
 ```
 
 - Note the differences between both of these commands (i.e. using and not using a pathname).
 - You can copy and move entire directories (and their contents) to other directories.
 
-4. Issue the following Linux command:
+6. Issue the following Linux command:
 
 ```bash
-cp -R osl640xx nwk680xx
+cp -R linux cisco
 ```
 
-5. Issue the following Linux command to display the directory structure of your home directory to confirm you copied the osl640xx directory:
+5. Issue the following Linux command to display the directory structure of your home directory to confirm you copied the linux directory:
 
 ```bash
 tree
 ```
 
-- Output of the **tree** command to confirm copy of **osl640xx** directory (and contents) to the **xyz100xx** directory.
+- Output of the **tree** command to confirm copy of **linux** directory (and contents) to the **xyz100xx** directory.
 
 6. Issue the following Linux command:
 
 ```bash
-mv osm620xx nwk680xx/osl640xx/tutorials/osm620xx
+mv windows cisco/linux/tutorials/windows
 ```
 
-7. Issue the following Linux command to display the directory structure of your home directory to confirm you moved the osm620xx directory:
+7. Issue the following Linux command to display the directory structure of your home directory to confirm you moved the windows directory:
 
 ```bash
 tree
@@ -387,34 +384,34 @@ In this investigation, we will learn how to **safely remove** directories and th
 2. Issue the following Linux command to remove the empty directory called **tutorials**:
 
 ```bash
-rmdir osl640xx/tutorials
+rmdir linux/tutorials
 ```
 
 3. Issue a command to confirm that you removed the **tutorials** directory.
-4. Issue the following Linux command to remove the empty directory called **osl640xx**:
+4. Issue the following Linux command to remove the empty directory called **linux**:
 
 ```bash
-rmdir osl640xx
+rmdir linux
 ```
 
-- NOTE: You should get an **error message**, since the **osl640xx** directory is **NOT** empty.
+- NOTE: You should get an **error message**, since the **linux** directory is **NOT** empty.
 - To remove non-empty directories, you can use the **rm -r** command.
 - The **-r** option stands for recursive, which can travel down the directory paths and their contents.
 
-5. Issue the following Linux command to remove the **osl640xx** directory and its contents:
+5. Issue the following Linux command to remove the **linux** directory and its contents:
 
 ```bash
-rm -r osl640xx
+rm -r linux
 ```
 
-6. Issue the **tree** command to confirm that the osl640xx directory (contained in your home directory) and its contents have been removed.
+6. Issue the **tree** command to confirm that the linux directory (contained in your home directory) and its contents have been removed.
 
 - **NOTE:** To safely remove non-empty directories, you can add the _-i_ option which will prompt the user if they wish to remove contents as it your travel recursively down a directory to remove directories and their contents.
 
 7. Issue the following Linux command (entering "y" when prompted):
 
 ```bash
-rm -ri nwk680xx
+rm -ri cisco
 ```
 
 - **NOTE:** You should have removed all directories that you have created.

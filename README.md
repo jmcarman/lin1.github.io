@@ -9,7 +9,7 @@
 - Scroll to the bottom and click **Create repository**.
 
 ## Configuring GitHub Pages
-- In your **GitHub Repository** click on **Settings*
+- In your **GitHub Repository** click on **Settings**
 - Under **Branch** select **main**, and click **Save**
 - Follow the steps outlined in **Initial setup** below.
 - If you are using a **Custom domain** insert it in the text box and click **Save**.
