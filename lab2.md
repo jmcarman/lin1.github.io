@@ -151,8 +151,7 @@ You will be creating the following **directory structure** within your home dire
 
 **Perform the Following Steps:**
 
-**NOTE:** For several of the following commands, you will be using **your username** to replace the text:"**yourusername**" in a pathname.
-
+> **NOTE:** For several of the following commands, you will be using **your username** to replace the text: **yourusername** in a pathname.
 For example, if your username was **mkhan** then you would display the pathname _/home/yourusername_ as: **/home/mkhan**
 
 1. Confirm that you are logged into your Ubuntu virtual machine and have the **Terminal** open.
@@ -162,7 +161,7 @@ For example, if your username was **mkhan** then you would display the pathname 
 mkdir /home/yourusername/files
 ```
 
-- (remember: use your Seneca username instead of "your-seneca-id")
+- (remember: use your username instead of "yourusername")
 - **NOTE:** You should always confirm that you have created a directory. This can be done by issuing the `ls` command.
 
 4. Issue the following Linux command:
@@ -210,10 +209,10 @@ mkdir /home/yourusername/files/linux /home/yourusername/files/windows /home/your
 9. Issue the following Linux command to confirm that those directories have been created:
 
 ```bash
-ls -ld /home/yourusername/files/windows /home/yourusername/files/cisco
+ls -ld /home/yourusername/files/linux /home/yourusername/files/windows /home/yourusername/files/cisco
 ```
 
-- **Using a FULL pathname starting from the root directory (i.e. /) requires is a LOT of typing!. Since we are already located in our home directory, we don't have to start from the root directory. This is called a "relative" pathname.**
+> **Using a FULL pathname starting from the root directory (i.e. /) requires is a LOT of typing!. Since we are already located in our home directory, we don't have to start from the root directory. This is called a "relative" pathname.**
 
 10. We will now create the subdirectories that are contained in the **linux** directory. Issue the following Linux command to move to the **linux** directory using a **relative** pathname:
 
@@ -303,7 +302,7 @@ sudo apt -y install tree
 2. Issue the following Linux command:
 
 ```bash
-tree
+tree files
 ```
 
 - **NOTE:** You should see the directory structure that you created in the previous investigation. You can also issue the **tree** command using a directory pathname to display the directory structure for a specific scope. Some of the output from the tree command has been omitted in the following screenshot.
@@ -328,7 +327,7 @@ ls -lR
 5. Issue the following Linux command:
 
 ```bash
-ls -lR linux
+ls -lR files/linux
 ```
 
 - Note the differences between both of these commands (i.e. using and not using a pathname).
@@ -337,27 +336,25 @@ ls -lR linux
 6. Issue the following Linux command:
 
 ```bash
-cp -R linux cisco
+cp -R files/linux files/cisco
 ```
 
 5. Issue the following Linux command to display the directory structure of your home directory to confirm you copied the linux directory:
 
 ```bash
-tree
+tree files
 ```
-
-- Output of the **tree** command to confirm copy of **linux** directory (and contents) to the **xyz100xx** directory.
 
 6. Issue the following Linux command:
 
 ```bash
-mv windows cisco/linux/tutorials/windows
+mv files/windows files/cisco/linux/tutorials/windows
 ```
 
 7. Issue the following Linux command to display the directory structure of your home directory to confirm you moved the windows directory:
 
 ```bash
-tree
+tree files
 ```
 
 - Let's run a checking script to see if you moved and copied the directories correctly.
@@ -384,14 +381,14 @@ In this investigation, we will learn how to **safely remove** directories and th
 2. Issue the following Linux command to remove the empty directory called **tutorials**:
 
 ```bash
-rmdir linux/tutorials
+rmdir files/linux/tutorials
 ```
 
 3. Issue a command to confirm that you removed the **tutorials** directory.
 4. Issue the following Linux command to remove the empty directory called **linux**:
 
 ```bash
-rmdir linux
+rmdir files/linux
 ```
 
 - NOTE: You should get an **error message**, since the **linux** directory is **NOT** empty.
@@ -401,7 +398,7 @@ rmdir linux
 5. Issue the following Linux command to remove the **linux** directory and its contents:
 
 ```bash
-rm -r linux
+rm -r files/linux
 ```
 
 6. Issue the **tree** command to confirm that the linux directory (contained in your home directory) and its contents have been removed.
@@ -411,13 +408,13 @@ rm -r linux
 7. Issue the following Linux command (entering "y" when prompted):
 
 ```bash
-rm -ri cisco
+rm -ri files
 ```
 
 - **NOTE:** You should have removed all directories that you have created.
 - Let's run a checking script to confirm that you have correctly removed all of those directories.
 
-8. Issue the **tree** command to confirm that all of those recently created directories have been removed.
+8. Issue the **ls** command to confirm that all of those recently created directories have been removed.
 9. Issue the following Linux command to run a checking script to confirm removal of those directories:
 
 ```bash
