@@ -480,7 +480,7 @@ nano textedit/practice/mytext.txt
 6. Referring to the table above, practice navigating and editing your entered lines for practice.
 7. To **save** your editing session, press: `ctrl + x`
 8. You will be prompted to modify your file: type the letter `y` for **yes**.
-9. The name of the file will be displayed, Press `ENTER`.to save editing changes for that file name.
+9. The name of the file will be displayed, Press `ENTER` to save editing changes for that file name.
 
 - **NOTE:** This prompt for file name allows you to change the name of the file if you wish. By pressing **ENTER**, it will accept the default filename.
 
@@ -584,8 +584,6 @@ vim textedit/practice/othertext.txt
 21. Issue the same command that you performed in **Step #2** to confirm that you had properly edited that file.
 22. **Save** and **exit** your vi editing session.
 
-![Vi text editor 2](/img/Vi-text-editor-2.png)
-
 - An **online tutorial** has been created to give you "hands-on" experience on how to use vim text editor. It is recommended that you run this online tutorial in your virtual machine to learn how to create and edit text files with the vim text editor.
 
 22. Issue the following to run the vim online tutorial:
@@ -595,7 +593,7 @@ vim textedit/practice/othertext.txt
 ```
 
 23. In the tutorial menu, select the first menu item labelled **"USING THE VI TEXT EDITOR"**
-24. Read and follow the instructions in the tutorial. Eventually, it will display a **simulated** vim environment and will provide you with **"hands-on"** practice using the vim text editor. As far as this author is aware, there is NO "hands-on" tutorial for the nano text editor in this particular format.
+24. Read and follow the instructions in the tutorial. Eventually, it will display a **simulated** vim environment and will provide you with **hands-on** practice using the vim text editor. As far as this author is aware, there is NO hands-on tutorial for the nano text editor in this particular format.
 25. When you have completed that section, you will be returned to the main menu. If you want to get extra practice, you can select the menu item labelled "**REVIEW EXERCISE**".
 26. When you want to exit the tutorial, select the menu option to exit the tutorial.
 
@@ -655,9 +653,9 @@ cat a.txt
 ```
 
 - Can you see all of the contents?
+> NOTE: If your terminal is fullscreen, resize it so it is smaller before continuing with the `more` and `less` commands.
 
 8. Issue the following Linux command:
-
 ```bash
 more a.txt
 ```
@@ -680,7 +678,7 @@ less a.txt
 sort a.txt
 ```
 
-- Why does the output not look what you expected? Why?
+- Why does the output not look what you expected?
 
 12. Issue the following Linux command:
 
@@ -782,21 +780,26 @@ diff aa.txt c.txt
 
 - What do you think is the purpose of this output?
 
-27. Issue the following Linux command:
-
+27. Open **c.txt** in **nano** and add the following line:
 ```bash
-find -P .
+Sample text
 ```
 
-- What is the output of this command?
-
 28. Issue the following Linux command:
+
+```bash
+find -mmin 5
+```
+
+- What is the output of this command? What do you think this represents?
+
+29. Issue the following Linux command:
 
 ```bash
 rm aa.txt b.txt a.txt.bk c.txt
 ```
 
-29. Issue the **ls** command to verify that these files have been removed.
+30. Issue the **ls** command to verify that these files have been removed.
 
 **Answer INVESTIGATION 2 observations / questions in your lab log book.**
 
@@ -836,8 +839,6 @@ ls -li ~/links/data-file.txt
 
 - View the **i-node** number for this file. What does this i-node number represent?
 - We will now create a **hard link** file to demonstrate how creating hard links are useful for **back-ups**.
-
-![Hard link inode 1](/img/Hard-link-inode1.png)
 
 **Hard links** share the same **i-node** with regular files on a Unix / Linux filesystem.
 
@@ -931,7 +932,7 @@ cat ~/data-file.hard.lnk
 mkdir ~/links2
 ```
 
-- **NOTE:** You will remain in your **home** directory to get practice using pathnames.
+> **NOTE:** You will remain in your **home** directory to get practice using pathnames.
 
 24. Issue the **ls -ld** command to confirm that the directory called **~/links2** exists.
 25. Use a text editor to create a file called **~/links2/text-file.txt** (i.e. without changing to the links2 directory).
@@ -1050,8 +1051,6 @@ ls -ld ~/etc
 ```
 
 - What do you notice? Symbolic links are good for creating "short-cuts" to both **regular files** and **directories**.
-
-![Symbolic link inode 2](/img/Symbolic-link-inode2.png)
 
 **Symbolic links** can be used to point to **directories** as well as regular files. Symbolic links can also point to files on **other** Unix/Linux filesystems.
 
