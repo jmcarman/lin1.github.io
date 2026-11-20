@@ -53,9 +53,7 @@ description: Unix/Linux File Management
 
 **Links:**
 
-| [ln](http://man7.org/linux/man-pages/man1/ln.1.html) |
-| :--------------------------------------------------- |
-
+- [ln](http://man7.org/linux/man-pages/man1/ln.1.html)
 - [Hard Links](http://www.linfo.org/hard_link.html#:~:text=A%20hard%20link%20is%20merely,created%20to%20other%20hard%20links.)
 - [Symbolic Links](https://www.computerhope.com/jargon/s/symblink.htm#:~:text=Alternatively%20referred%20to%20as%20a,or%20directory%20using%20its%20path.&text=In%20Linux%20and%20Unix%20symbolic,created%20using%20the%20mklink%20command.)
 
@@ -429,9 +427,9 @@ rm -ri files
 
 Since IT students will be working in the Unix / Linux command line environment, it is useful to learn a least two common command-line **text editors.**
 
-Although **programming students** can use **graphical IDE's** to code and compile programs, they can **create source code** using a text editor and **compile their source code** on Linux systems to generate executable programs (without having to transfer them for compilation or execution).
+Although **programmers** can use **graphical IDE's** to code and compile programs, they can **create source code** using a text editor and **compile their source code** on Linux systems to generate executable programs (without having to transfer them for compilation or execution).
 
-**Networking and Tech Support students** can use a text editor to **edit configuration files**. These students in upper grades will become familiar with the process of installing, configuring, and running network services and text editors are an important tools to help setup but also "tweak" or make **periodic changes in networking services configuration.**
+**Network Administrators** can use a text editor to **edit configuration files**. In later courses you will become familiar with the process of installing, configuring, and running network services and text editors are an important tools to help setup but also "tweak" or make **periodic changes in networking services configuration.**
 
 The two most readily-available command line text editors in Linux are **Nano** and **vi**. The Nano text editor would seem like an easier-to-use text editor, but vi (although taking longer to learn) has outstanding features and allow the user to be more productive with editing text files.
 
