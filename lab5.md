@@ -28,8 +28,9 @@ description: Numbering Conversion, File Permissions and Introduction to Shell Sc
 
 **Numbering Conversion and Data Representation Definitions:**
 
-| [Data Representation](https://home.adelphi.edu/~siegfried/cs170/170l1.pdf) | [Binary Numbers](https://en.wikipedia.org/wiki/Binary_number) | [Octal Numbers](https://en.wikipedia.org/wiki/Octal) |
-| :------------------------------------------------------------------------- | :------------------------------------------------------------ | :--------------------------------------------------- |
+- [Data Representation](https://home.adelphi.edu/~siegfried/cs170/170l1.pdf)
+- [Binary Numbers](https://en.wikipedia.org/wiki/Binary_number)
+- [Octal Numbers](https://en.wikipedia.org/wiki/Octal)
 
 **File Permission Concepts:**
 
@@ -607,12 +608,6 @@ echo
 
 - You should notice an **ERROR message** indicating you don't have permissions to run the file. To fix this, you need to **add execute permissions** prior to running the shell script.
 
-```bash
-> ./hello
-Hello YourUserID
->
-```
-
 8. Issue the following linux command to **add** execute permissions for your shell script:
 
 ```bash
@@ -666,7 +661,7 @@ In the next steps you will be accessing GitHub repositories and creating a new r
 
 ### Introduction to Git & GitHub
 
-- Browse to the [Introduction to Git & GitHub materials](https://github.com/OPS145/github-starter-course) on GitHub. You will be using this for this investigation.
+- Browse to the [Introduction to Git & GitHub materials](https://github.com/CNET206/github-starter-course) on GitHub. You will be using this for this investigation.
 - Click **Use this template** in the right corner.
 - Select **Create a new repository** from the dropdown menu.
 - Select **Your GitHub username** from the **Owner** dropdown menu.
@@ -681,7 +676,7 @@ Additionally, you may want to install the GitHub mobile app. It allows you acces
 
 ### Creating your Github Repo for Lab 5
 
-- Browse to the [Lab 5 repository template](https://github.com/OPS145/lab5) on GitHub. You will be using this for Bash scripting in this lab.
+- Browse to the [Lab 5 repository template](https://github.com/CNET206/lab5) on GitHub. You will be using this for Bash scripting in this lab.
 - Click **Use this template** in the right corner.
 - Select **Create a new repository** from the dropdown menu.
 - Select **Your GitHub username** from the **Owner** dropdown menu.
@@ -694,7 +689,7 @@ Next, follow the sections for setup on a Shared Computer by Accessing GitHub Cod
 
 ### Shared Computer (ie College PC) or Personal Computer: Accessing GitHub Codespaces
 
-Once you have set up your Lab 4 repository by following the link above (go back and do that if you missed it), you can access GitHub Codespaces from any browser on any device (PC, tablet, smart phone). Codespaces gives you access to Visual Studio Code, with direct access to your repository (without having to clone) from anywhere. It's perfect for a portable development environment. Login to GitHub (if you haven't already) and proceed.
+Once you have set up your Lab 5 repository by following the link above (go back and do that if you missed it), you can access GitHub Codespaces from any browser on any device (PC, tablet, smart phone). Codespaces gives you access to Visual Studio Code, with direct access to your repository (without having to clone) from anywhere. It's perfect for a portable development environment. Login to GitHub (if you haven't already) and proceed.
 
 You may have noticed in the link above you can click **Open in GitHub Codespaces**. Feel free to do so now. If you have already clicked past that window the next few steps will show you how to access it again (which is useful for future access attempts anyway). Click on **Code** and create a new codespace. Once you have created it, you can access it by clicking on the named link.
 
@@ -703,9 +698,9 @@ You may have noticed in the link above you can click **Open in GitHub Codespaces
 It may take a couple seconds to create your Codespace, but once it launches it is exactly like the interface in Visual Studio Code. That is because it is Visual Studio Code, running in an Ubuntu container in the cloud through GitHub. You get access to this completely free through GitHub Classroom. You will notice you have been provided a template called **hello.bash**. In codespaces, double click on it in the filebrowser to the left and proceed to **Creating Your Bash Shell Script**.
 
 ### Personal Computer: Downloading Visual Studio Code (VS Code)
-Visual Studio Code is available on the college PCs via [MyApps](https://myapps.senecapolytechnic.ca/login). You can launch it the same way you access Virtual Box in the labs. You can then login to your GitHub account using a college PC to do your lab as well (instead of using Codespaces).
+Visual Studio Code is available on the college PCs. You can then login to your GitHub account using a college PC to do your lab as well (instead of using Codespaces).
 
-You will be using Visual Studio Code and Git to write Bash scripts. If you are working from home or your laptop however, you will want to install and configure both of these. If you are working on a PC at Seneca and using VS Code via MyApps, skip to the next section (configuring Visual Studio Code). You can download and install Visual Studio Code in the following ways:
+You will be using Visual Studio Code and Git to write Bash scripts. If you are working from home or your laptop however, you will want to install and configure both of these. If you are working on a PC and using VS Code locally, skip to the next section (configuring Visual Studio Code). You can download and install Visual Studio Code in the following ways:
 
 - From the [Visual Studio Code website](https://code.visualstudio.com/).
 - In Windows—from the Microsoft Store: search for `vscode` and click **Install**.
