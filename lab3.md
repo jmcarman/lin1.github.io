@@ -128,20 +128,20 @@ You can immediately place a username after the tilde to represent another userâ€
 Examples:
 
 ```bash
-ls ~/linux/examples
+ls ~/files/linux/samples
 ```
 
 ![Relative To Home 1](/img/Relative-to-home-1.png)
 
-Directories in red display the path from the home directory of the current user (which is **userid**) to the **examples** directory (i.e. the relative-to-home pathname: **~/linux/examples**.
+Directories in red display the path from the home directory of the current user (which is **userid**) to the **samples** directory (i.e. the relative-to-home pathname: **~/linux/samples**).
 
 ```bash
-ls ~murray.saul/linux/notes
+ls ~murray.saul/files/linux
 ```
 
 ![Relative To Home 2](/img/Relative-to-home-2.png)
 
-Directories in red display the path from another user's home directory location to their **notes** directory (i.e. the relative-to-home pathname: **~jane/linux/notes**
+Directories in red display the path from another user's home directory location to their **notes** directory (i.e. the relative-to-home pathname: **~jane/files/linux/notes**)
 
 **NOTE:** Deciding which **type of pathname** to use depends on many factors including: **knowledge of current directory**, **knowledge of directory structure**, **currently directory location**, and **type of file management command** that is being used.
 
@@ -214,7 +214,7 @@ git pull
 
 2. Issue the following Linux command to create the directory structure displayed to the right using **absolute pathnames**:
 
-   - **NOTE:** Just continue typing and let the text continue of separate lines. Remeber to replace the text "youruserid" with your actual Seneca-id.
+   - **NOTE:** Just continue typing and let the text continue of separate lines. Remeber to replace the text "youruserid" with your username.
 
 ```bash
 mkdir -p /home/youruserid/tutorial3/practice/commands /home/youruserid/tutorial3/practice/examples /home/youruserid/tutorial3/notes/lesson1 /home/youruserid/tutorial3/notes/lesson2
