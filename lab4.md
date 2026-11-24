@@ -730,7 +730,8 @@ cal;pwd;date > output.txt
 echo "This will be split over multiple \
 lines. Note that the shell will realize \
 that a pipe requires another command, so \
-it will automatically go to the next line" |tr '[a-z]' '[A-Z]'
+it will automatically go to the next line" |
+tr '[a-z]' '[A-Z]'
 ```
 
 - Did the command work? What is the purpose of issuing a Linux command in this way?
