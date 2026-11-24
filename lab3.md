@@ -214,10 +214,10 @@ git pull
 
 2. Issue the following Linux command to create the directory structure displayed to the right using **absolute pathnames**:
 
-   - **NOTE:** Just continue typing and let the text continue of separate lines. Remeber to replace the text "youruserid" with your username.
+   - **NOTE:** Just continue typing and let the text continue of separate lines. Remeber to replace the text "username" with your username.
 
 ```bash
-mkdir -p /home/youruserid/tutorial3/practice/commands /home/youruserid/tutorial3/practice/examples /home/youruserid/tutorial3/notes/lesson1 /home/youruserid/tutorial3/notes/lesson2
+mkdir -p /home/username/lab3/practice/commands /home/username/lab3/practice/examples /home/username/lab3/notes/lesson1 /home/username/lab3/notes/lesson2
 ```
 
 ![Dir12](/img/Dir12.png)
@@ -225,7 +225,7 @@ mkdir -p /home/youruserid/tutorial3/practice/commands /home/youruserid/tutorial3
 3. Issue the following Linux command to confirm that you properly created the directory structure:
 
 ```bash
-tree /home/youruserid/tutorial3
+tree /home/username/lab3
 ```
 
 - You should notice that using absolute pathnames with this Linux command **requires a lot of typing**.
@@ -234,7 +234,7 @@ tree /home/youruserid/tutorial3
 4. To remove this directory structure, issue the following Linux command (enter "**y**" at each prompt to remove ALL contents):
 
 ```bash
-rm -ri /home/youruserid/tutorial3
+rm -ri /home/username/lab3
 ```
 
 5. Issue a command tree command as you did in **step #4** to confirm that the directory structure has been removed.
@@ -243,21 +243,21 @@ rm -ri /home/youruserid/tutorial3
    - **NOTE:** You usually generate the ~ character by Holding down **SHIFT** and press the button to the left of the number **1** above the text on your keyboard.
 
 ```bash
-mkdir -p ~/tutorial3/practice/commands ~/tutorial3/practice/examples ~/tutorial3/notes/lesson1 ~/tutorial3/notes/lesson2
+mkdir -p ~/lab3/practice/commands ~/lab3/practice/examples ~/lab3/notes/lesson1 ~/lab3/notes/lesson2
 ```
 
 - Did this command require less typing than the previous command using absolute pathnames?
 
 7. Issue the **tree** command to confirm the directory structure was properly created.
 
-   - Let's remove the **tutorial3** directory and its contents and issue the same command using **relative pathnames**.
+   - Let's remove the **lab3** directory and its contents and issue the same command using **relative pathnames**.
 
-8. Issue the same command as you did in **step #5** to remove the **tutorial3** directory and its contents safely.
-0. Issue a Linux command to confirm you removed the **tutorial3** directory and its contents.
+8. Issue the same command as you did in **step #5** to remove the **lab3** directory and its contents safely.
+0. Issue a Linux command to confirm you removed the **lab3** directory and its contents.
 10. Issue the following Linux command to create the same directory structure using relative pathnames:
 
 ```bash
-mkdir -p tutorial3/practice/commands tutorial3/practice/examples tutorial3/notes/lesson1 tutorial3/notes/lesson2
+mkdir -p lab3/practice/commands lab3/practice/examples lab3/notes/lesson1 lab3/notes/lesson2
 ```
 
 11. Issue a command to verify that the proper directory structure was created.
@@ -285,7 +285,7 @@ When performing the next series of steps, refer to the **tree diagram** below. L
 4. Issue a Linux command to change to the **examples** directory in your recently-created directory structure.
 
 ```bash
-cd tutorial3/practice/examples
+cd lab3/practice/examples
 ```
 
 5. Issue a Linux command to confirm you are located in the examples directory.
@@ -307,7 +307,7 @@ ls /bin
 8. Let's copy the file called ls which is contained in the **/bin** directory to your **home** directory by using the **cp** command. First, issue the following Linux command to copy the ls command from the /bin directory to your home directory using absolute pathnames:
 
 ```bash
-cp /bin/ls /home/youruserid
+cp /bin/ls /home/username
 ```
 
 9. Now let's issue the previous command using just relative pathname (remember, our current directory location is **examples**):
