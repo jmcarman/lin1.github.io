@@ -237,7 +237,7 @@ tree /home/username/lab3
 rm -ri /home/username/lab3
 ```
 
-5. Issue a command tree command as you did in **step #4** to confirm that the directory structure has been removed.
+5. Issue a command tree command as (like you did previously) to confirm that the directory structure has been removed.
 6. Issue the following Linux command to create the same directory structure using relative-to-home pathnames:
 
    - **NOTE:** You usually generate the ~ character by Holding down **SHIFT** and press the button to the left of the number **1** above the text on your keyboard.
@@ -252,7 +252,7 @@ mkdir -p ~/lab3/practice/commands ~/lab3/practice/examples ~/lab3/notes/lesson1 
 
    - Let's remove the **lab3** directory and its contents and issue the same command using **relative pathnames**.
 
-8. Issue the same command as you did in **step #5** to remove the **lab3** directory and its contents safely.
+8. Issue the same command as you did earlier to remove the **lab3** directory and its contents safely.
 0. Issue a Linux command to confirm you removed the **lab3** directory and its contents.
 10. Issue the following Linux command to create the same directory structure using relative pathnames:
 
@@ -262,7 +262,7 @@ mkdir -p lab3/practice/commands lab3/practice/examples lab3/notes/lesson1 lab3/n
 
 11. Issue a command to verify that the proper directory structure was created.
 
-    - **QUESTION:** Which **mkdir** command (pathname type) that you performed in steps **3** , **7** , and **11** required the LEAST number of keystrokes (i.e. characters)?
+    - **QUESTION:** Which **mkdir** command (pathname type) required the LEAST number of keystrokes (i.e. characters)?
 
 You may think that issuing Linux file management commands are better using **relative** or **relative-to-home** pathnames instead of **absolute** pathnames, but that is not always true.
 

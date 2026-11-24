@@ -25,8 +25,10 @@ description: Redirection
 
 **Redirection:**
 
-| [Standard Input (stdin)](http://www.linfo.org/standard_input.html) | [Standard Output (stdout)](http://www.linfo.org/standard_output.html) | [Standard Error (stderr)](http://www.linfo.org/standard_error.html) | [Pipeline Commands](http://www.linfo.org/pipe.html) |
-| :----------------------------------------------------------------- | :-------------------------------------------------------------------- | :------------------------------------------------------------------ | :-------------------------------------------------- |
+- [Standard Input (stdin)](http://www.linfo.org/standard_input.html)
+- [Standard Output (stdout)](http://www.linfo.org/standard_output.html) 
+- [Standard Error (stderr)](http://www.linfo.org/standard_error.html) 
+- [Pipeline Commands](http://www.linfo.org/pipe.html)
 
 **Multiple Commands:**
 
@@ -35,8 +37,16 @@ description: Redirection
 
 **Redirection Filters:**
 
-| [more](http://man7.org/linux/man-pages/man1/more.1.html), [less](http://man7.org/linux/man-pages/man1/less.1.html) | [head](http://man7.org/linux/man-pages/man1/head.1.html), [tail](http://man7.org/linux/man-pages/man1/tail.1.html) | [sort](http://man7.org/linux/man-pages/man1/sort.1.html) | [uniq](http://man7.org/linux/man-pages/man1/uniq.1.html) | [grep](http://linuxcommand.org/lc3_man_pages/grep1.html) | [cut](http://man7.org/linux/man-pages/man1/cut.1.html) | [tr](http://linuxcommand.org/lc3_man_pages/tr1.html) | [wc](http://man7.org/linux/man-pages/man1/wc.1.html) | [tee](http://man7.org/linux/man-pages/man1/tee.1.html) |
-| :----------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------- | :------------------------------------------------------- | :------------------------------------------------------- | :----------------------------------------------------- | :--------------------------------------------------- | :--------------------------------------------------- | :----------------------------------------------------- |
+- [more](http://man7.org/linux/man-pages/man1/more.1.html), [less](http://man7.org/linux/man-pages/man1/less.1.html)
+- [head](http://man7.org/linux/man-pages/man1/head.1.html), [tail](http://man7.org/linux/man-pages/man1/tail.1.html)
+- [sort](http://man7.org/linux/man-pages/man1/sort.1.html)
+- [uniq](http://man7.org/linux/man-pages/man1/uniq.1.html)
+- [grep](http://linuxcommand.org/lc3_man_pages/grep1.html)
+- [cut](http://man7.org/linux/man-pages/man1/cut.1.html)
+- [tr](http://linuxcommand.org/lc3_man_pages/tr1.html)
+- [wc](http://man7.org/linux/man-pages/man1/wc.1.html)
+- [tee](http://man7.org/linux/man-pages/man1/tee.1.html) |
+
 
 ## Key Concepts
 
