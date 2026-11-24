@@ -45,7 +45,7 @@ Last week, we used a pathname from our home directory to create and manipulate d
 
 **For Example:**
 
-- /home/userid/uli101/cars.txt **(absolute pathname)**
+- /home/userid/linux/cars.txt **(absolute pathname)**
 - samples/cars.txt **(relative pathname)**
 - ~/cars.txt **(relative-to-home pathname)**
 
@@ -73,12 +73,12 @@ ls /bin
 The directory in red displays the FULL path from the root directory to the bin directory (i.e. the absolute pathname: /bin.
 
 ```bash
-ls /home/your-user-id/uli101/examples
+ls /home/username/files/linux/examples
 ```
 
 ![Absolute Path 1](/img/Absolute-path-1.png)
 
-Directories in red display the FULL path from the root directory to the examples directory (i.e. the absolute pathname: /home/your-user-id/uli101/examples.
+Directories in red display the FULL path from the root directory to the examples directory (i.e. the absolute pathname: /home/username/files/linux/examples/).
 
 #### Relative Pathnames
 
@@ -98,50 +98,50 @@ _Advantages of using Relative Pathnames:_
 Examples:
 
 ```bash
-ls ../../../bin
+ls ../../../../bin
 ```
 
-![Relative Pathname 1](/img/Relative-pathname-1.png)
+![Relative Pathname 1](/img/Relative-path-1.png)
 
-Directories in red display the path from the current directory location (which is **xyz100**) to the **bin** directory (i.e. the relative pathname: **../../../bin.**
+Directories in red display the path from the current directory location (which is **cisco**) to the **bin** directory (i.e. the relative pathname: **../../../bin.**
 
 ```bash
-ls examples
+ls samples
 ```
 
 ```bash
-ls ./examples
+ls ./samples
 ```
 
-![Relative Pathname 2](/img/Relative-pathname-2.png)
+![Relative Pathname 2](/img/Relative-path-2.png)
 
-Directories in red display the path from the current directory location (which is **uli101**) to the **examples** directory (i.e. the relative pathname: **uli101/examples** or **./uli101/examples**
+Directories in red display the path from the current directory location (which is **linux**) to the **samples** directory (i.e. the relative pathname: **linux/samples** or **./linux/samples**
 
 #### Relative-to-Home Pathnames
 
 A **relative-to-home pathname begins** with the tilde character ( i.e. ~) to represent the user’s home directory.
 
-The tilde character ~ stores the path of the user’s home directory (i.e. **~ = /home/current-user-id**)
+The tilde character ~ stores the path of the user’s home directory (i.e. **~ = /home/username**)
 
 You can immediately place a username after the tilde to represent another user’s home directory (e.g. **~jane = /home/jane**)
 
 Examples:
 
 ```bash
-ls ~/uli101/examples
+ls ~/linux/examples
 ```
 
 ![Relative To Home 1](/img/Relative-to-home-1.png)
 
-Directories in red display the path from the home directory of the current user (which is **userid**) to the **examples** directory (i.e. the relative-to-home pathname: **~/uli101/examples**.
+Directories in red display the path from the home directory of the current user (which is **userid**) to the **examples** directory (i.e. the relative-to-home pathname: **~/linux/examples**.
 
 ```bash
-ls ~murray.saul/uli101/notes
+ls ~murray.saul/linux/notes
 ```
 
 ![Relative To Home 2](/img/Relative-to-home-2.png)
 
-Directories in red display the path from another user's home directory location to their **notes** directory (i.e. the relative-to-home pathname: **~jane/uli101/notes**
+Directories in red display the path from another user's home directory location to their **notes** directory (i.e. the relative-to-home pathname: **~jane/linux/notes**
 
 **NOTE:** Deciding which **type of pathname** to use depends on many factors including: **knowledge of current directory**, **knowledge of directory structure**, **currently directory location**, and **type of file management command** that is being used.
 
