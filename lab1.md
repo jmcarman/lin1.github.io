@@ -17,7 +17,7 @@ description: Setup and use a Linux environment
 
 **Lecture Slides:**
 
-- Week 1 Lecture Slides: [Web](https://docs.google.com/presentation/d/e/2PACX-1vSBPhhAhygt6YdYo3YuKagCqdANHdRYrdjQiLfTheGnHHUR56DhP1w0ieiZn4p6BhpBL3ubnlHyTUQZ/pub?start=false&loop=false&delayms=3000)
+- Week 1 Lecture Slides: [Slides](https://docs.google.com/presentation/d/e/2PACX-1vSBPhhAhygt6YdYo3YuKagCqdANHdRYrdjQiLfTheGnHHUR56DhP1w0ieiZn4p6BhpBL3ubnlHyTUQZ/pub?start=false&loop=false&delayms=3000){:target="_blank"}
 
 **Software:**
 
