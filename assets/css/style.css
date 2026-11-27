@@ -199,7 +199,7 @@ img.sample {
 /* Flex schedule (homepage) */
 .grid-container {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: 1fr 1fr 2fr;
 	gap: .25em;
 	background-color: #333333;
 	padding: .25em;
