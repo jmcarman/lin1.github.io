@@ -205,6 +205,7 @@ img.sample {
 	padding: .25em;
 	border-radius: .25em;
 	font-size: 1em;
+	grid-auto-flow: row;
 }
 
 /* Flatten table/div rows so every cell is a grid item */
