@@ -7,7 +7,7 @@ description: Course schedule
 
 | Week | Lab |
 |:----|:-------------|
-| Week 1: [Web](https://docs.google.com/presentation/d/e/2PACX-1vSBPhhAhygt6YdYo3YuKagCqdANHdRYrdjQiLfTheGnHHUR56DhP1w0ieiZn4p6BhpBL3ubnlHyTUQZ/pub?start=false&loop=false&delayms=3000) | Installing and Using Linux [Lab 1](./lab1.md) |
+| Week 1: [Slides](https://docs.google.com/presentation/d/e/2PACX-1vSBPhhAhygt6YdYo3YuKagCqdANHdRYrdjQiLfTheGnHHUR56DhP1w0ieiZn4p6BhpBL3ubnlHyTUQZ/pub?start=false&loop=false&delayms=3000) | Installing and Using Linux [Lab 1](./lab1.md) |
 | Week 2 | Unix and Linux File Management [Lab 2](./lab2.md) |
 | Week 3 | Advanced File Management and Quoting Special Characters [Lab 3](./lab3.md) |
 | Week 4 | Redirection [Lab 4](./lab4.md) |
